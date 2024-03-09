@@ -1,0 +1,61 @@
+wait(3)
+local args = {
+    [1] = {
+        ["\3"] = {
+            [1] = {
+                [1] = {
+                    ["TowerOrientation"] = Vector3.zero,
+                    ["Action"] = "Place",
+                    ["TowerPosition"] = Vector3.new(-795.7721557617188, 904.4542236328125, 399.45538330078125),
+                    ["RealId"] = "1",
+                    ["Tower"] = "Itoshi (Awakened)"
+                }
+            }
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteService"):WaitForChild("Handler"):FireServer(unpack(args))
+wait(2)
+local args = {
+    [1] = {
+        ["\5"] = {
+            [1] = {}
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteService"):WaitForChild("Handler"):FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = {
+        ["\5"] = {
+            [1] = {}
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteService"):WaitForChild("Handler"):FireServer(unpack(args))
+wait(2)
+--story itachi evo
+while task.wait() do
+for i,v in pairs(workspace.Towers:GetChildren()) do 
+ if v:IsA("Model") then
+local args = {
+    [1] = {
+        ["\8"] = {
+            [1] = {
+                [1] = {
+                    ["Radius"] =9999999,
+                    ["TowerId"] = tostring(v:GetAttribute("Id")),
+                    ["Position"] = Vector3.new(-795.7721557617188, 904.4542236328125, 399.45538330078125)
+                }
+            }
+        }
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteService"):WaitForChild("Handler"):FireServer(unpack(args))
+end 
+end
+end
