@@ -58,16 +58,6 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("RemoteService"):WaitForChild("Handler"):FireServer(unpack(args))
 
 
-    local Player = game.Players.LocalPlayer
-local vim = game:GetService("VirtualInputManager")
-
-local part =game.Players.LocalPlayer.PlayerGui.ScreenGui.RoundResult.Buttons.Replay
-
-     local partCenterX = part.AbsolutePosition.X + (part.AbsoluteSize.X / 2)
-     local partCenterY = part.AbsolutePosition.Y + (part.AbsoluteSize.Y /0.5)
-
-  vim:SendMouseButtonEvent(partCenterX, partCenterY, 0, true, game, 0)
-     vim:SendMouseButtonEvent(partCenterX, partCenterY, 0, false, game, 0)
 
 end 
 end
